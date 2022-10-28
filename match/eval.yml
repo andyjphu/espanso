@@ -8,10 +8,10 @@ matches:
           cmd: "expr $ESPANSO_NUM1 + $ESPANSO_NUM2"
 
 
-  - regex: "=sum\\((?P<num1>.*?),(?P<num2>.*?)\\)"
+  - regex: "^\\(?P<num1>.*?)\\)"
     replace: "{{result}}"
     vars:
       - name: result
         type: shell
         params:
-          cmd: "expr $ESPANSO_NUM1 + $ESPANSO_NUM2"
+          cmd: "exp $ESPANSO_NUM1"
